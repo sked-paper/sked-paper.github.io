@@ -459,7 +459,9 @@ An overview of SKED. We render the base NeRF model 𝑥base from at least two vi
         } else if (currentImageIndex > numOfImages) {
             currentImageIndex = 1;
         }
-        document.getElementById('slider-image').src = "./resources/r" + currentImageIndex + ".gif";
+        var newSrc = "./resources/r" + currentImageIndex + ".gif";
+        newSrc += '?' + new Date().getTime(); // Append current timestamp
+        document.getElementById('slider-image').src = newSrc;
         updateCircles();
     }
 </script>
