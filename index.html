@@ -70,12 +70,58 @@
         background-color: #20A0F0;
     }
 
-    .paper-link, .github-link {
+    /* .paper-link {
         color: #0078C0;
         text-decoration: none;
         font-weight: bold;
         font-size: 24px;
-    }
+    } */
+
+    .rectangle {
+    display: inline-block;
+    border: 2px solid #20A0F0;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    z-index: 1; /* Add this line */
+}
+
+.rectangle a {
+    color: #20A0F0;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative; /* Add this line */
+    z-index: 2; /* Add this line */
+}
+
+.rectangle:hover {
+    border: 2px solid white;
+    background: #20A0F0;
+}
+
+.rectangle:hover a {
+    color: white;
+    text-decoration: none;
+}
+
+.rectangle::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 10px;
+}
+
+.rectangle .github-link {
+    color: #20A0F0;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+
 
 
     .handwritten {
@@ -250,22 +296,26 @@
 						</center>
 					</td>
 				</tr>
-			</table> -->
-            <table align=center width=250px>
-                <tr>
-                  <td align=center width=120px>
-                    <center>
-                      <a href='https://arxiv.org/abs/2303.10735v2' class="paper-link">[Paper]</a>
-                    </center>
-                  </td>
-                  <td align=center width=120px>
-                    <center>
-                      <a href='' class="github-link">[Code (coming soon)]</a>
-                    </center>
-                  </td>
-                </tr>
-              </table>
-		</table>
+                </table> -->
+                <table align=center width=640px>
+                    <tr>
+                        <td align=center width=640px>
+                            <center>
+                            <div class="rectangle">
+                                <a href='https://arxiv.org/abs/2303.10735v2' class="github-link">Paper</a>
+                            </div>
+                            </center>
+                        </td>
+                        <td align=center width=640px>
+                            <center>
+                                <div class="rectangle">
+                                    <a href='' class="github-link">Code (coming soon!)</a>
+                                </div>
+                            </center>
+                        </td>
+                    </tr>
+                </table>
+                </table>
 	</center>
     <br><br>
 	<center>
